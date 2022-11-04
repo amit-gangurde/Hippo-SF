@@ -1,0 +1,28 @@
+<template>
+
+    <template if:false={isLoaded} class="slds-card__header slds-is-relative">
+        <lightning-card>
+            <lightning-spinner alternative-text="Loading..." size="small" variant="brand"></lightning-spinner>
+        </lightning-card>
+    </template>
+
+
+    <template if:true={isLoaded}>
+        <template if:false={searchQuoteId}>
+            <lightning-card title="Gator Integration">
+                <lightning-button variant="brand" label="Retrieve Quote" slot="actions" onclick={handleQuoteNew}></lightning-button>
+            </lightning-card>
+        </template>
+        <!--<template if:true={errorURL}>
+            <lightning-card title="Gator Integration">
+                <p class="slds-p-horizontal_small">{errorURL}</p>
+                <lightning-button variant="brand" label="View Quote" slot="actions" onclick={handleQuoteNew}></lightning-button>
+            </lightning-card>
+        </template>-->
+        <template if:true={quoteURL}>
+            <lightning-card title="Quote">
+                <iframe src={quoteURL} frameborder="0" height="1250px" width="100%"></iframe>
+            </lightning-card>
+        </template>
+    </template>
+</template>

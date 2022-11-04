@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Lead Score Toggle" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <template if:true={lead_scores}>
+                <div class="slds-grid slds-gutters">
+                <template for:each={lead_scores} for:item="lead_score_item">
+                    <div key={lead_score_item.apiName} class="slds-col">
+                        <lightning-input type="toggle" key={lead_score_item.apiName} label={lead_score_item.friendly_label} checked={lead_score_item.value} name={lead_score_item.label} onchange={handleChange}></lightning-input>
+                    </div>
+                    <!--<p key={leadscoreitem.score}>{leadscoreitem.score}</p>-->
+                </template>
+                </div>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </div>
+    </lightning-card>
+</template>

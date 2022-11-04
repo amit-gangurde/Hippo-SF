@@ -1,0 +1,8 @@
+<apex:page lightningStylesheets="true" showHeader="false" sidebar="false" standardController="case" extensions="CallUnassignAllUsersCtrl" action="{!callUnassignAll}">
+<apex:form >
+<apex:pageMessages ></apex:pageMessages>
+<apex:commandButton value="Done" action="{!Cancel}"/>
+<apex:inputHidden value="{!Case.Claim_Vendor__c}"/>
+<apex:inputHidden value="{!Case.Claims_Adjuster__c}"/>
+</apex:form>
+</apex:page>

@@ -1,0 +1,98 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+                controller="PaymentFeedback" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="payInfoId" type="Id"/>
+    <aura:attribute name="isWebHookData" type="boolean" default="false"/>
+
+    <aura:if isTrue="{!v.isWebHookData}">
+    <div class="slds-section slds-is-close" aura:id="paymentSection">
+        <!--section header-->
+        <h3 class="slds-section__title">
+            <button aria-controls="PaymentList" class="slds-button slds-section__title-action">
+                <span onclick="{!c.toggleSection}" data-auraId="paymentSection">
+                    <lightning:icon iconName="utility:switch"
+                                    size="x-small"
+                                    class="slds-section__title-action-icon slds-button__icon_left"
+                                    alternativeText="button icon"
+                                    />
+                </span>
+                <span class="slds-truncate" title="Payment">Payment Details</span>
+            </button>
+        </h3>
+        <!--section body-->
+        <div class="slds-section__content" id="paymentList">
+            <lightning:recordViewForm recordId="{!v.payInfoId}" objectApiName="Transaction__c">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Name" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Amount__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="CheckNumber__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Claim_Payment__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Cleared_Date__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="CR_Payment_ID__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="EscheatDate__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Funded__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="IP_PaymentID__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="MailTracking_Number__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Method_Last4Digit__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="MethodID__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="New_Method__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Original_Method__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="PaidDate__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Payment_Status__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="ReIssue__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="ReIssue__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="Status__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="TransactionID__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="ErrorCode__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="around-small" size="6">
+                        <lightning:outputField fieldName="ErrorMessage__c" />
+                    </lightning:layoutItem>
+
+                </lightning:layout>
+            </lightning:recordViewForm>
+        </div>
+    </div>
+    </aura:if>
+</aura:component>

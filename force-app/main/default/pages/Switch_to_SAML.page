@@ -1,0 +1,22 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Attention!!!</h1>
+  <br></br>
+  <body>
+Starting Monday, 2/18/2021 users will no longer be able to login to Salesforce.com using a username and password. Instead, you will need to click the Salesforce tile on your OneLogin dashboard.
+If you have not already done so, you are required to test the login flow now, to ensure you will be able to login to Salesforce.com on 2/15. 
+ 
+To get ready for this transition, we ask that you verify you can successfully access Salesforce.com via Single Sign-On:
+1.  Log into Salesforce.com the usual way. Once logged in, please logout using the menu on the top right.
+2.  Log into your OneLogin dashboard at https://hippo.onelogin.com
+3.  Type “Salesforce” in the OneLogin Search bar.
+4.  Click the Salesforce tile (if you have multiple tiles, click the one WITHOUT the “Edit” button).
+Please ensure you are now properly logged into Salesforce by clicking the person icon on the top right and viewing your full name.
+Problems? Please email helpdesk@hippo.com and we’ll sort it out for you.
+We kindly request that you complete this check by 2/10/2021 – as we plan to turn off the ability to sign into Salesforce.com with a username and password, and we want to make sure you are not locked out.
+Please reach out to your IT team with any questions.
+ 
+Thank you!
+</body>
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

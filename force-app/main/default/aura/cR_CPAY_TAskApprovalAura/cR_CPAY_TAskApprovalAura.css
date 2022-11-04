@@ -1,0 +1,29 @@
+.THIS .slds-backdrop {
+display:none;
+}
+.THIS .slds-modal__container {
+    width:100%;
+        right: 25% !important;
+ }
+.THIS.slds-modal{
+    right: 22% !important;
+}
+.THIS .errorMsg{
+        padding: 10px;
+    border: 1px solid red;
+    font-size: initial;
+    border-radius: 15px;
+    color: red;
+    background: #f4e6e6;
+}
+.THIS .slds-modal__content {
+    overflow-y: auto; 
+    overflow:auto;
+}
+
+.THIS .slds-modal__container {
+    margin: 0 auto;
+    width: 143% !important;
+    max-width: 61rem !important;
+    min-width: 20rem;
+}
