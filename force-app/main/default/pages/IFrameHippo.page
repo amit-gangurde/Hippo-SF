@@ -1,5 +1,0 @@
-<apex:page showHeader="false" >
-    <!-- <apex:iframe src="https://e94c-24-6-79-64.ngrok.io/frame.html" scrolling="true" id="theIframe" /> -->
-    <apex:iframe src="https://develop.gator.myhippo.io/questionnaire?herd_id=4508f9d7-9898-48a1-8b67-e0f1355c3711" scrolling="true" id="theIframe"/>
-    <!-- <iframe height="600px" id="theIframe" name="theIframe" src="https://staging.gator.myhippo.io/questionnaire?herd_id=d99c815b-342b-4071-8d34-3e9e8a23c0e1" width="100%"></iframe> -->
-</apex:page>

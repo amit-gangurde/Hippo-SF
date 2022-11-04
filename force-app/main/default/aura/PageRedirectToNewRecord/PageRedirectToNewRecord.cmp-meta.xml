@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>53.0</apiVersion>
-    <description>After a record is created in a flow, can call this as a Core action to redirect to that record detail page.</description>
-</AuraDefinitionBundle>
